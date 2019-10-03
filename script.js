@@ -1,4 +1,6 @@
-
+function newGame(){
+    location.reload()
+};
 
 //Create array of word options
 const words = [
@@ -94,4 +96,3 @@ hngmn.beginPath();
 // // while(remainingLetters > 0) {
     
 // // }
-
