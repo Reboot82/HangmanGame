@@ -1,39 +1,33 @@
-// //Create array of word options
-// const words = [
-//     "television",
-//     "lynx",
-//     "explosion",
-//     "brontosaurus",
-//     "hypertext",
-//     "pillar"
-// ];
 
-// // //Start with a word and create answer array
-// // let word = words[Math.floor(Math.random() * words.length)];
-// // let answerArray = [];
-// // for(let i = 0; i < word.length; i++) {
-// //     answerArray[i] = "_";
-// // }
 
-// //Display alphabet options
-// const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-// 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-// 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+//Create array of word options
+const words = [
+    "television",
+    "lynx",
+    "explosion",
+    "brontosaurus",
+    "hypertext",
+    "pillar"
+];
+let rand = 0;
+let word = "";
+let numRight = 0;
+let numWrong = 0;
+let wordlength = 0;
+let numChar = 0;
+let lives = 6;
 
-// // const buttons = function () {
-// //     myButtons = document.getElementById('buttons');
-// //     letters = document.createElement('ul');
+//Start with a word and create answer array
+function pickWord(){
+    rand = Math.floor(Math.random() * words.length);
+    word = words[rand];
+    let answerArray = [];
+    for(let i = 0; i < word.length; i++) {
+        answerArray[i] = "_";
+    } return word
+}
 
-// //     for (let i = 0; i < alphabet.length; i++) {
-// //       letters.id = 'alphabet';
-// //       list = document.createElement('li');
-// //       list.id = 'letter';
-// //       list.innerHTML = alphabet[i];
-// //       check();
-// //       myButtons.appendChild(letters);
-// //       letters.appendChild(list);
-// //     }
-// //   }
+
 // //Display Hangman
 let canvas = document.getElementById("hangman");
 let hngmn = canvas.getContext("2d");
@@ -100,3 +94,4 @@ hngmn.beginPath();
 // // while(remainingLetters > 0) {
     
 // // }
+
