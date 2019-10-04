@@ -1,6 +1,8 @@
 function newGame() {
+    correct = 0;
     numWrong = 0;
     numRight = 0;
+    answerArray = [];
     $('.answer').remove();
     $('.buttons').remove();
     pickWord();
@@ -17,6 +19,7 @@ const words = [
     "ANOTHER",
     "ROUGH"
 ];
+let correct = 0;
 let rand = 0;
 let word = "";
 let numRight = 0;
@@ -24,8 +27,9 @@ let numWrong = 0;
 let wordlength = 0;
 let numChar = 0;
 let lives = 6;
-let wordArray = []
-let myScore = 0
+let wordArray = [];
+let myScore = 0;
+let answerArray = [];
 
 //Start with a word and create answer array
 function pickWord() {
@@ -35,7 +39,6 @@ function pickWord() {
     }
     rand = Math.floor(Math.random() * words.length);
     word = words[rand];
-    let answerArray = [];
     for (let i = 0; i < word.length; i++) {
         answerArray[i] = "_";
     }
@@ -46,14 +49,18 @@ function pickWord() {
     console.log(wordArray)
     const guess = document.getElementsByClassName("buttons")
     for (let i = 0; i < guess.length; i++) {
-        guess[i].addEventListener('click', () => {
-            console.log(alphabet[i]);
-
+        guess[i].addEventListener('click', (event) => {
+            let letter = event.target.innerHTML;
+            console.log(letter);
+            correct = numRight;
             for (let x = 0; x < wordArray.length; x++) {
-                if (alphabet[i] === wordArray[x]) {
-                    $(`.answer[data-id=${x}]`).text(`${alphabet[i]}`)
-                    numRight++
+                if (letter === wordArray[x]) {
+                    $(`.answer[data-id=${x}]`).text(`${alphabet[i]}`);
+                    numRight++;
                 }
+            }
+            if(correct === numRight) {
+                numWrong++;
             }
             if (numRight === wordArray.length) {
                 alert("You win!")
@@ -61,6 +68,7 @@ function pickWord() {
                 document.getElementById('scoreboard').innerHTML = "Score = " + myScore;
 
             }
+            guess[i].style.visibility = "hidden";
         })
     }
 }
