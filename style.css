@@ -1,4 +1,4 @@
-#buttons{
+#buttons { 
     display: flex;
     flex-wrap: wrap;
     padding: 15px;
@@ -7,16 +7,16 @@
     font-size: 50px;
     justify-content: center;
     text-align: center;
+    list-style-type: none;
+}
+
+.buttons {
+    border: solid 2px black;
+    padding: 0 -10px 0 10px;
 }
 
 .middle{
     display: flex;
-}
-
-.button{
-    border: solid 2px black;
-    padding: 0 -10px 0 10px;
-    display: inline-block;
 }
 
 #newGame{
@@ -26,4 +26,26 @@
 footer{
     display: flex;
     justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 0;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+body {
+    background-image: src="images/background.jpg"
+}
+
+#word {
+    display: flex;
+    letter-spacing: 10px;
+    font-size: 30px;
 }

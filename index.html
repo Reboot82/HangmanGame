@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
-    <script defer src='script.js' type="text/javascript"></script>
     <title>Hangman Time</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="wrapper">
-        <h1>HANGMAN TIME</h1>
-        <h3>Click New Game to restart</h3>
-    </div>
-    <div id="scoreboard">
-        <h2>Score = 0</h2>
-    </div>
+    <header>
+        <div class="wrapper">
+            <h1>HANGMAN TIME</h1>
+            <div id="scoreboard">
+                <h2>Score = 0</h2>
+            </div>
+        </div>
+    </header>
+    <h3>Click New Game to start</h3>
+    
     <div class="middle">
         <div id="image">
             <canvas id="hangman" width="400" height="400"
@@ -24,39 +27,13 @@
             </canvas>
 
         </div>
-        <div id="buttons">
-            <div class="button" id="a" value="A" onclick="">A</div>
-            <div class="button" id="b" value="B" onclick="">B</div>
-            <div class="button" id="c" value="C" onclick="">C</div>
-            <div class="button" id="d" value="D" onclick="">D</div>
-            <div class="button" id="e" value="E" onclick="">E</div>
-            <div class="button" id="f" value="F" onclick="">F</div>
-            <div class="button" id="g" value="G" onclick="">G</div>
-            <div class="button" id="h" value="H" onclick="">H</div>
-            <div class="button" id="i" value="I" onclick="">I</div>
-            <div class="button" id="j" value="J" onclick="">J</div>
-            <div class="button" id="k" value="K" onclick="">K</div>
-            <div class="button" id="l" value="L" onclick="">L</div>
-            <div class="button" id="m" value="M" onclick="">M</div>
-            <div class="button" id="n" value="N" onclick="">N</div>
-            <div class="button" id="o" value="O" onclick="">O</div>
-            <div class="button" id="p" value="P" onclick="">P</div>
-            <div class="button" id="q" value="Q" onclick="">Q</div>
-            <div class="button" id="r" value="R" onclick="">R</div>
-            <div class="button" id="s" value="S" onclick="">S</div>
-            <div class="button" id="t" value="T" onclick="">T</div>
-            <div class="button" id="u" value="U" onclick="">U</div>
-            <div class="button" id="v" value="V" onclick="">V</div>
-            <div class="button" id="w" value="W" onclick="">W</div>
-            <div class="button" id="x" value="X" onclick="">X</div>
-            <div class="button" id="y" value="Y" onclick="">Y</div>
-            <div class="button" id="z" value="Z" onclick="">Z</div>
-
-        </div>
+        <ul id="buttons">
+            
+        </ul>
     </div>
-    <div id="word">
+    <ul id="word">
 
-    </div>
+    </ul>
     <div id="outcome">
 
     </div>
@@ -65,5 +42,6 @@
             <button onclick="newGame()">New Game</button>
         </div>
     </footer>
+    <script defer src='script.js' type="text/javascript"></script>
 </body>
 </html>

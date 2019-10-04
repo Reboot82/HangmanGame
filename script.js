@@ -1,15 +1,18 @@
 function newGame(){
-    location.reload()
+    $('.answer').remove()
+    pickWord();
 };
 
 //Create array of word options
 const words = [
-    "television",
-    "lynx",
-    "explosion",
-    "brontosaurus",
-    "hypertext",
-    "pillar"
+    "TELEVISION",
+    "LYNX",
+    "EXPLOSION",
+    "BRONTOSAURUS",
+    "HYPERTEXT",
+    "PILLAR",
+    "ANOTHER",
+    "PRESIDENTIAL"
 ];
 let rand = 0;
 let word = "";
@@ -18,6 +21,7 @@ let numWrong = 0;
 let wordlength = 0;
 let numChar = 0;
 let lives = 6;
+let wordArray = []
 
 //Start with a word and create answer array
 function pickWord(){
@@ -26,8 +30,28 @@ function pickWord(){
     let answerArray = [];
     for(let i = 0; i < word.length; i++) {
         answerArray[i] = "_";
-    } return word
+    } 
+    for (var i = 0; i < answerArray.length; i++) {
+        $('#word').append(`<li class='answer' data-id=${i}>${answerArray[i]}</li>`)
+    } console.log(word)
+    wordArray = word.split("");
+    console.log(wordArray)
+
+    const guess = document.getElementsByClassName("buttons")
+    for(let i = 0; i < guess.length; i++) {
+    guess[i].addEventListener('click', () => {
+        console.log(alphabet[i]);
+
+        for(let x = 0; x < wordArray.length; x++) {
+            if(alphabet[i] === wordArray[x]) {
+                $(`.answer[data-id=${x}]`).text(`${alphabet[i]}`)
+        }
+    }
+})
 }
+}
+
+
 
 
 // //Display Hangman
@@ -88,7 +112,18 @@ hngmn.beginPath();
     hngmn.moveTo(225, 40);
     hngmn.lineTo(225, 100);
     hngmn.stroke();
-    
+
+    //Display alphabet
+const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 
+'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 
+'W','X','Y','Z']
+
+
+for (var i = 0; i < alphabet.length; i++) {
+    $('#buttons').append(`<li class='buttons'>${alphabet[i]}</li>`)
+}
+
+
 
 
 // // //Keep track of players progress
