@@ -1,18 +1,20 @@
 function newGame(){
-    $('.answer').remove()
+    numWrong = 0;
+    numRight = 0;
+    $('.answer').remove();
     pickWord();
 };
 
 //Create array of word options
 const words = [
-    "TELEVISION",
+    "WORD",
     "LYNX",
-    "EXPLOSION",
-    "BRONTOSAURUS",
-    "HYPERTEXT",
+    "CHEESE",
+    "CAR",
+    "BOMB",
     "PILLAR",
     "ANOTHER",
-    "PRESIDENTIAL"
+    "ROUGH"
 ];
 let rand = 0;
 let word = "";
@@ -44,7 +46,11 @@ function pickWord(){
             for(let x = 0; x < wordArray.length; x++) {
                 if(alphabet[i] === wordArray[x]) {
                     $(`.answer[data-id=${x}]`).text(`${alphabet[i]}`)
+                    numRight++
                 }
+            }
+            if(numRight === wordArray.length) {
+                alert("You win!")
             }
         })
     }
