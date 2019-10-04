@@ -49,3 +49,7 @@ body {
     letter-spacing: 10px;
     font-size: 30px;
 }
+
+.hidden {
+    display: none;
+}

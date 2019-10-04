@@ -36,19 +36,17 @@ function pickWord(){
     } console.log(word)
     wordArray = word.split("");
     console.log(wordArray)
-
     const guess = document.getElementsByClassName("buttons")
     for(let i = 0; i < guess.length; i++) {
-    guess[i].addEventListener('click', () => {
-        console.log(alphabet[i]);
-
-        for(let x = 0; x < wordArray.length; x++) {
-            if(alphabet[i] === wordArray[x]) {
-                $(`.answer[data-id=${x}]`).text(`${alphabet[i]}`)
-        }
+        guess[i].addEventListener('click', () => {
+            console.log(alphabet[i]);
+            for(let x = 0; x < wordArray.length; x++) {
+                if(alphabet[i] === wordArray[x]) {
+                    $(`.answer[data-id=${x}]`).text(`${alphabet[i]}`)
+                }
+            }
+        })
     }
-})
-}
 }
 
 
