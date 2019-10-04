@@ -36,7 +36,6 @@ function pickWord(){
     } console.log(word)
     wordArray = word.split("");
     console.log(wordArray)
-
     const guess = document.getElementsByClassName("buttons")
     for(let i = 0; i < guess.length; i++) {
         guess[i].addEventListener('click', () => {
