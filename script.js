@@ -62,13 +62,16 @@ function pickWord() {
             if(correct === numRight) {
                 numWrong++;
             }
-            if (numRight === wordArray.length) {
-                alert("You win!")
+            if(numRight === wordArray.length) {
                 myScore = myScore + 100
                 document.getElementById('scoreboard').innerHTML = "Score = " + myScore;
-
+                alert("You win! Click [New Game] to play again.");
             }
             guess[i].style.visibility = "hidden";
+            if(numWrong === 6) {
+                alert("You lose! Try again.");
+                newGame();
+            }
         })
     }
 }
