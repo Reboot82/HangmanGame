@@ -137,6 +137,7 @@ hngmn.beginPath();
 hngmn.moveTo(225, 40);
 hngmn.lineTo(225, 100);
 hngmn.stroke();
+    
 
 //Display alphabet
 const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
@@ -144,11 +145,45 @@ const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
     'W', 'X', 'Y', 'Z']
 
 
+//Create functions for visuals of game
 
+function hang1() {
+	hngmn.beginPath();
+	hngmn.arc(225, 130, 30, 0, 2 * Math.PI);
+	hngmn.stroke();
+}
 
+function hang2() {
+	hngmn.beginPath();
+	hngmn.moveTo(225, 160);
+	hngmn.lineTo(225, 250);
+	hngmn.stroke();
+}
 
-// // //Keep track of players progress
-// // let remainingLetters = word.length
-// // while(remainingLetters > 0) {
+function hang3() {
+	hngmn.beginPath();
+	hngmn.moveTo(225, 195)
+	hngmn.lineTo(170, 158)
+	hngmn.stroke();
+}
 
-// // }
+function hang4() {
+	hngmn.beginPath();
+	hngmn.moveTo(225, 195)
+	hngmn.lineTo(280, 158)
+	hngmn.stroke();
+}
+
+function hang5() {
+	hngmn.beginPath();
+	hngmn.moveTo(225,248)
+	hngmn.lineTo(170, 295)
+	hngmn.stroke();
+}
+
+function hang6() {
+	hngmn.beginPath();
+	hngmn.moveTo(225, 195)
+	hngmn.lineTo(280, 158)
+    hngmn.stroke();
+}
