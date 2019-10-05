@@ -8,6 +8,7 @@ function newGame() {
     $('.buttons').remove();
     pickWord();
     hangman();
+    document.getElementById("start").style.visibility = "hidden";
 };
 
 //Create array of word options
@@ -87,13 +88,16 @@ function pickWord() {
             }
             if (numWrong === 6) {
                 hang6();
-                setTimeout(alert("You lose! Try again."), 1000);
-                newGame();
+                setTimeout(lose, 200);
             }
         })
     }
 }
 
+function lose() {
+    alert("You Lose! Please try again.");
+    newGame();
+}
 
 
 
@@ -203,8 +207,8 @@ function hang5() {
 
 function hang6() {
     hngmn.beginPath();
-    hngmn.moveTo(225, 195)
-    hngmn.lineTo(280, 158)
+    hngmn.moveTo(225, 248)
+    hngmn.lineTo(280, 295)
     hngmn.stroke();
 }
 

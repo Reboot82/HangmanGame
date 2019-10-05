@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800,900&display=swap" rel="stylesheet">
     <title>Hangman Time</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
@@ -17,9 +18,9 @@
             </div>
         </div>
     </header>
-    <h3>Click New Game to start</h3>
+    <h3 id="start">Click New Game to start</h3>
     <div class="gameTime">
-            <button onclick="newGame()">New Game</button>
+            <button id="newGame" onclick="newGame()">New Game</button>
         </div>
     
     <div class="middle">
@@ -37,9 +38,6 @@
     <ul id="word">
 
     </ul>
-    <div id="outcome">
-
-    </div>
         <footer>
         
     </footer>
