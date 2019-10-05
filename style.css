@@ -1,3 +1,11 @@
+body {
+    text-shadow: 2px 2px #595959;
+}
+
+li.answer {
+    text-shadow: none;
+}
+
 #buttons { 
     display: flex;
     flex-wrap: wrap;
@@ -83,10 +91,15 @@ canvas {
 
 h1 {
     font-size: 60px;
+    text-shadow: 2px 2px #595959;
 }
 
 h3 {
     font-size: 25px;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+}
+
+#scoreboard {
+    margin: 50px 0 0 0;
 }
