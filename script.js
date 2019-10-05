@@ -13,14 +13,12 @@ function newGame() {
 
 //Create array of word options
 const words = [
-    "FRIENDLY",
-    "TERRIBLE",
-    "EXPLOSION",
-    "FLAVOR",
-    "BOMB",
-    "PILLAR",
-    "ANOTHER",
-    "ROUGHOUSE"
+    "FRIENDLY", "TERRIBLE", "EXPLOSION", "FLAVOR", "BOMB", "PILLAR",
+    "ANOTHER", "ROUGHOUSE", "BRAWNY", "UNBECOMING", "THRIVE", "SHATTER",
+    "GULLIBLE", "STEEP", "OPERATION", "SUGAR", "ADMIRE", "CONSTITUTION", 
+    "HOSE", "FATHER", "IMPLORE", "RENOUCE", "ROMANTIC", "POLISH", "NERVOUS",
+    "DECISIVE", "DISASTROUS", "HYPERTEXT", "JAVASCRIPT", "PYTHON", "TERABYTE",
+    "TERMINAL", "HTML", "SOFTWARE", "FLATWARE"
 ];
 let correct = 0;
 let rand = 0;
@@ -49,12 +47,12 @@ function pickWord() {
         $('#word').append(`<li class='answer' data-id=${i}>${answerArray[i]}</li>`)
     } console.log(word)
     wordArray = word.split("");
-    console.log(wordArray)
+    // console.log(wordArray)
     const guess = document.getElementsByClassName("buttons")
     for (let i = 0; i < guess.length; i++) {
         guess[i].addEventListener('click', (event) => {
             let letter = event.target.innerHTML;
-            console.log(letter);
+            // console.log(letter);
             correct = numRight;
             for (let x = 0; x < wordArray.length; x++) {
                 if (letter === wordArray[x]) {
