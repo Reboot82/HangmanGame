@@ -13,14 +13,14 @@ function newGame() {
 
 //Create array of word options
 const words = [
-    "WORD",
-    "LYNX",
-    "CHEESE",
-    "CAR",
+    "FRIENDLY",
+    "TERRIBLE",
+    "EXPLOSION",
+    "FLAVOR",
     "BOMB",
     "PILLAR",
     "ANOTHER",
-    "ROUGH"
+    "ROUGHOUSE"
 ];
 let correct = 0;
 let rand = 0;
