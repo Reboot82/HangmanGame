@@ -29,7 +29,7 @@ let numRight = 0;
 let numWrong = 0;
 let wordlength = 0;
 let numChar = 0;
-let lives = 6;
+let lives = 3;
 let wordArray = [];
 let myScore = 0;
 let answerArray = [];
@@ -62,15 +62,16 @@ function pickWord() {
                     numRight++;
                 }
             }
+            guess[i].style.visibility = "hidden";
             if (correct === numRight) {
                 numWrong++;
             }
             if (numRight === wordArray.length) {
                 myScore = myScore + 100
                 document.getElementById('scoreboard').innerHTML = "Score = " + myScore;
-                alert("You win! Click [New Game] to play again.");
+                alert("You win!");
+                newGame();
             }
-            guess[i].style.visibility = "hidden";
             if (numWrong === 1) {
                 hang1();
             }
@@ -95,7 +96,14 @@ function pickWord() {
 }
 
 function lose() {
+    if(lives === 0){
+        alert("You're quite the hangman! Your score was " + myScore + "! Please play again.")
+        document.location.reload()
+        return
+    }
     alert("You Lose! Please try again.");
+    lives--;
+    document.getElementById('lives').innerHTML = "Lives = " + lives;
     newGame();
 }
 

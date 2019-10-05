@@ -40,7 +40,7 @@ li.answer {
 .gameTime{
     display: flex;
     justify-content: center;
-    background-color: rgb(106, 106, 106);
+    background-color: rgb(152, 152, 152);
     border: 3px solid;
     color: black;
     padding: 3px;
@@ -92,6 +92,10 @@ canvas {
 h1 {
     font-size: 60px;
     text-shadow: 2px 2px #595959;
+}
+
+h2 {
+    line-height: 12px;
 }
 
 h3 {
