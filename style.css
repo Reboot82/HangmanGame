@@ -10,11 +10,9 @@ li.answer {
     display: flex;
     flex-wrap: wrap;
     padding: 15px;
-    margin: auto;
     letter-spacing: 40px;
     font-size: 50px;
     justify-content: center;
-    text-align: center;
 }
 
 .buttons {
@@ -43,7 +41,7 @@ li.answer {
     background-color: rgb(152, 152, 152);
     border: 3px solid;
     color: black;
-    padding: 3px;
+    padding: 5px;
     text-align: center;
     text-decoration: none;
     font-size: 30px;
@@ -51,6 +49,7 @@ li.answer {
     border-radius: 10px;
     box-shadow: 5px 3px;
     font-family: 'Montserrat', sans-serif;
+    width:fit-content;
 }
 
 .wrapper {
@@ -77,8 +76,10 @@ html {
     letter-spacing: 10px;
     font-size: 30px;
     background: white;
-    margin: 0 400px 20px 0;
+    margin: 0 0 20px 10px;
     border-radius: 15px;
+    width:fit-content;
+    padding: 0 10px 0 10px;
 }
 
 .hidden {
