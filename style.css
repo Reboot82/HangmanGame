@@ -58,6 +58,7 @@ li.answer {
     padding: 0 20px 0 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
+    margin: none;
 }
 
 li {
@@ -93,6 +94,9 @@ canvas {
 h1 {
     font-size: 60px;
     text-shadow: 2px 2px #595959;
+    padding: 10px 10px 0 10px;
+    border: 10px 10px 0 10px;
+    margin: 10px 10px 0 10px;
 }
 
 h2 {
