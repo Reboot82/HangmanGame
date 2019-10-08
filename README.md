@@ -1,4 +1,4 @@
-# project-1
+# Project-1
 
 For Project 1, I created a simple game of Hangman.
 

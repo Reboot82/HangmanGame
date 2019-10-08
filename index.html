@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,43 +10,44 @@
     <title>Hangman Time</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
+
 <body>
     <header>
         <div class="wrapper">
             <h1>HANGMAN TIME</h1>
             <h2>
-            <div id="scoreboard">
-                Score = 0
-            </div><br>
-            <div id="lives">
-                Lives = 3
-            </div>
+                <div id="scoreboard">
+                    Score = 0
+                </div><br>
+                <div id="lives">
+                    Lives = 3
+                </div>
             </h2>
         </div>
     </header>
     <h3 id="start">Click New Game to start</h3>
     <div class="gameTime">
-            <button id="newGame" onclick="newGame()">New Game</button>
-        </div>
-    
+        <button id="newGame" onclick="newGame()">New Game</button>
+    </div>
+
     <div class="middle">
         <div id="image">
-            <canvas id="hangman" width="400" height="400"
-            style="border:0px solid #c3c3c3;">
-            Hangman Goes Here
+            <canvas id="hangman" width="400" height="400" style="border:0px solid #c3c3c3;">
+                Hangman Goes Here
             </canvas>
 
         </div>
         <ul id="buttons">
-            
+
         </ul>
     </div>
     <ul id="word">
 
     </ul>
-        <footer>
-        
+    <footer>
+
     </footer>
     <script defer src='script.js' type="text/javascript"></script>
 </body>
+
 </html>

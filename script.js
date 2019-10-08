@@ -1,3 +1,4 @@
+//Function to clear board and reset variables upon "New Game"
 function newGame() {
     correct = 0;
     numWrong = 0;
@@ -15,12 +16,18 @@ function newGame() {
 const words = [
     "FRIENDLY", "TERRIBLE", "EXPLOSION", "FLAVOR", "BOMB", "PILLAR",
     "ANOTHER", "ROUGHOUSE", "BRAWNY", "UNBECOMING", "THRIVE", "SHATTER",
-    "GULLIBLE", "STEEP", "OPERATION", "SUGAR", "ADMIRE", "CONSTITUTION", 
+    "GULLIBLE", "STEEP", "OPERATION", "SUGAR", "ADMIRE", "CONSTITUTION",
     "HOSE", "FATHER", "IMPLORE", "RENOUCE", "ROMANTIC", "POLISH", "NERVOUS",
     "DECISIVE", "DISASTROUS", "HYPERTEXT", "JAVASCRIPT", "PYTHON", "TERABYTE",
     "TERMINAL", "HTML", "SOFTWARE", "FLATWARE", "SIMILAR", "APATHETIC", "DESIGN",
     "WELCOME", "TRIUMPH", "INITIATE", "QUANTIFY", "PREPOSTEROUS", "COMPUTER"
 ];
+//Create alphabet
+const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+    'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
+    'W', 'X', 'Y', 'Z'];
+
+//Set variables for game
 let correct = 0;
 let rand = 0;
 let word = "";
@@ -33,12 +40,13 @@ let wordArray = [];
 let myScore = 0;
 let answerArray = [];
 
-//Start with a word and create answer array
+//This function is the entire game.
 function pickWord() {
-
+    //Create letter bank
     for (var i = 0; i < alphabet.length; i++) {
         $('#buttons').append(`<li class='buttons'>${alphabet[i]}</li>`)
     }
+    //Start with a word and create answer array
     rand = Math.floor(Math.random() * words.length);
     word = words[rand];
     for (let i = 0; i < word.length; i++) {
@@ -48,12 +56,12 @@ function pickWord() {
         $('#word').append(`<li class='answer' data-id=${i}>${answerArray[i]}</li>`)
     } console.log(word)
     wordArray = word.split("");
-    // console.log(wordArray)
+    // Create event listener for every letter button
     const guess = document.getElementsByClassName("buttons")
     for (let i = 0; i < guess.length; i++) {
         guess[i].addEventListener('click', (event) => {
             let letter = event.target.innerHTML;
-            // console.log(letter);
+            //Check guess to see if it's right
             correct = numRight;
             for (let x = 0; x < wordArray.length; x++) {
                 if (letter === wordArray[x]) {
@@ -93,9 +101,9 @@ function pickWord() {
         })
     }
 }
-
+//Function for losing life/game.
 function lose() {
-    if(lives === 0){
+    if (lives === 0) {
         alert("You're quite the hangman! Your score is " + myScore + "! Please play again.")
         document.location.reload()
         return
@@ -106,9 +114,7 @@ function lose() {
     newGame();
 }
 
-
-
-// //Display Hangman
+// //Display Hangman Arena
 let canvas = document.getElementById("hangman");
 let hngmn = canvas.getContext("2d");
 function hangman() {
@@ -169,49 +175,36 @@ function hangman() {
     hngmn.stroke();
 }
 
-
-//Display alphabet
-const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
-    'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
-    'W', 'X', 'Y', 'Z']
-
-
-//Create functions for visuals of game
-
+//Create functions for visuals of game (Hangman)
 function hang1() {
     hngmn.beginPath();
     hngmn.arc(225, 130, 30, 0, 2 * Math.PI);
     hngmn.stroke();
 }
-
 function hang2() {
     hngmn.beginPath();
     hngmn.moveTo(225, 160);
     hngmn.lineTo(225, 250);
     hngmn.stroke();
 }
-
 function hang3() {
     hngmn.beginPath();
     hngmn.moveTo(225, 195)
     hngmn.lineTo(170, 158)
     hngmn.stroke();
 }
-
 function hang4() {
     hngmn.beginPath();
     hngmn.moveTo(225, 195)
     hngmn.lineTo(280, 158)
     hngmn.stroke();
 }
-
 function hang5() {
     hngmn.beginPath();
     hngmn.moveTo(225, 248)
     hngmn.lineTo(170, 295)
     hngmn.stroke();
 }
-
 function hang6() {
     hngmn.beginPath();
     hngmn.moveTo(225, 248)
