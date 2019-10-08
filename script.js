@@ -18,7 +18,8 @@ const words = [
     "GULLIBLE", "STEEP", "OPERATION", "SUGAR", "ADMIRE", "CONSTITUTION", 
     "HOSE", "FATHER", "IMPLORE", "RENOUCE", "ROMANTIC", "POLISH", "NERVOUS",
     "DECISIVE", "DISASTROUS", "HYPERTEXT", "JAVASCRIPT", "PYTHON", "TERABYTE",
-    "TERMINAL", "HTML", "SOFTWARE", "FLATWARE"
+    "TERMINAL", "HTML", "SOFTWARE", "FLATWARE", "SIMILAR", "APATHETIC", "DESIGN",
+    "WELCOME", "TRIUMPH", "INITIATE", "QUANTIFY", "PREPOSTEROUS", "COMPUTER"
 ];
 let correct = 0;
 let rand = 0;
@@ -95,7 +96,7 @@ function pickWord() {
 
 function lose() {
     if(lives === 0){
-        alert("You're quite the hangman! Your score was " + myScore + "! Please play again.")
+        alert("You're quite the hangman! Your score is " + myScore + "! Please play again.")
         document.location.reload()
         return
     }
