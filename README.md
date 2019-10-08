@@ -25,8 +25,14 @@ Once players come to the site, they are asked to click New Game to begin playing
 
 ## Wireframe
 
-![alt text](/Users/brandtcampbell/ga-sei/ga-sei/sandbox/project-1/images/IMG_1346.jpg "Wireframe")
+![alt text](images/IMG_1346.jpg "Wireframe")
 
 ![alt text](images/WireframeStart.png "Game Start")
 
 ![alt text](images/WireframeGame.png "Game Play")
+
+## Future Development
+
+* Make multiplayer version
+* Allow user input
+* Keep High Score
